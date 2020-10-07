@@ -6,7 +6,7 @@ def get_spider_data():
     Load the spider dataset as it is.
     :return: A pandas dataframe containing the spider dataset.
     """
-    data = pd.read_excel("spider_twosides_table.xlsx").set_index(["mol_id", "alldrugs_TWOSIDES"])
+    data = pd.read_excel("../data/spider_twosides_table.xlsx").set_index(["mol_id", "alldrugs_TWOSIDES"])
     return data
 
 
