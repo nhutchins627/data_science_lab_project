@@ -1,12 +1,22 @@
 import pandas as pd
 
 
+def get_old_spider_data():
+    """
+    This function is deprecated, don't use it for further processing.
+    Load the spider dataset as it is.
+    :return: A pandas dataframe containing the spider dataset.
+    """
+    data = pd.read_excel("../data/spider_twosides_table.xlsx").set_index(["mol_id", "alldrugs_TWOSIDES"])
+    return data
+
+
 def get_spider_data():
     """
     Load the spider dataset as it is.
     :return: A pandas dataframe containing the spider dataset.
     """
-    data = pd.read_excel("../data/spider_twosides_table.xlsx").set_index(["mol_id", "alldrugs_TWOSIDES"])
+    data = pd.read_csv("../data/spider_twosides_table.csv")
     return data
 
 
